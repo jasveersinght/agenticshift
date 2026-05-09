@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@300;400;500;600;700&display=swap');
+
+/* ── FONT FACE: Trade Gothic Bold Condensed fallback via Barlow Condensed ── */
+:root {
+  --font-headline: 'Barlow Condensed', 'Trade Gothic', 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+  --font-body: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --font-wordmark: 'Century Gothic', 'Trebuchet MS', 'Futura', sans-serif;
+
+  --bg: #080808;
+  --surface: #111111;
+  --surface-alt: #0d0d0d;
+  --border: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.3);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.55);
+  --text-muted: rgba(255, 255, 255, 0.35);
+  --purple: #7f77dd;
+  --purple-faint: rgba(127, 119, 221, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+p, li, input, textarea, small {
+  font-family: var(--font-body);
+}
+
+.logo-wordmark {
+  font-family: var(--font-wordmark);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+::selection {
+  background: rgba(127, 119, 221, 0.35);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #080808; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.28); }
+
+/* Utility */
+.section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-pad {
+  padding: 120px 40px;
+}
+
+.label-tag {
+  font-family: var(--font-headline);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 24px;
+}
+
+.hr-rule {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Buttons */
+.btn-primary {
+  font-family: var(--font-headline);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #080808;
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 14px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-ghost {
+  font-family: var(--font-headline);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 0;
+  padding: 14px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.85); }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-pad { padding: 64px 24px; }
+  .section-inner { padding: 0 24px; }
+  .hidden-mobile { display: none !important; }
+  .show-mobile { display: flex !important; }
+  .grid-2col { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .grid-3col { grid-template-columns: 1fr !important; }
+  .grid-4col { grid-template-columns: 1fr 1fr !important; }
+  .grid-6col { grid-template-columns: 1fr !important; }
+  .footer-grid { grid-template-columns: 1fr !important; text-align: center !important; }
+}
+
+@media (min-width: 769px) {
+  .show-mobile { display: none !important; }
+}
