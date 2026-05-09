@@ -33,7 +33,7 @@ export default function LandingPage() {
           </motion.span>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
             style={{ fontSize: 'clamp(60px, 8vw, 88px)', color: '#fff', marginBottom: '24px' }}>
-            Prove You Can Build.
+            Shift to the future.
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }}
             style={{ fontSize: '22px', color: 'rgba(255,255,255,0.7)', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
